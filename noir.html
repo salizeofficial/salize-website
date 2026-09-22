@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SALIZÉ — THE NOIR</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11100e;
+    color: #f5f1e8;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 45px;
+    background: rgba(17,16,14,0.94);
+    border-bottom: 1px solid rgba(201,168,106,0.15);
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 7px;
+    color: #f5f1e8;
+}
+
+nav a {
+    margin-left: 28px;
+    color: #aaa49a;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c9a86a;
+}
+
+/* HERO */
+
+.noir-page {
+    min-height: 100vh;
+    padding: 150px 8% 90px;
+    display: flex;
+    align-items: center;
+}
+
+.noir-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.watch-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-area img {
+    width: 100%;
+    max-width: 520px;
+    height: 560px;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.55));
+}
+
+.noir-info {
+    text-align: left;
+}
+
+.collection-label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #c9a86a;
+    margin-bottom: 20px;
+}
+
+.noir-info h1 {
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: #f5f1e8;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    margin: 8px 0 28px;
+    padding: 8px 16px;
+    border: 1px solid #c9a86a;
+    color: #c9a86a;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.price-label {
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #8b7040;
+}
+
+.notify-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid #c9a86a;
+    color: #c9a86a;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notify-button:hover {
+    background: #c9a86a;
+    color: #11100e;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.divider span {
+    width: 80px;
+    height: 1px;
+    background: #c9a86a;
+}
+
+.divider strong {
+    color: #c9a86a;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.description {
+    max-width: 520px;
+    color: #bdb7ad;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* DETAILS */
+
+.details {
+    background: #f5f1e8;
+    color: #171512;
+    padding: 110px 8%;
+}
+
+.details-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.details-label {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #8b7040;
+    margin-bottom: 18px;
+}
+
+.details h2 {
+    text-align: center;
+    font-size: clamp(35px, 5vw, 60px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 55px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #cfc6b8;
+}
+
+.details-grid div {
+    min-height: 105px;
+    padding: 28px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #cfc6b8;
+    border-bottom: 1px solid #cfc6b8;
+}
+
+.details-grid div:nth-child(3n) {
+    border-right: none;
+}
+
+.details-grid div:nth-child(n+4) {
+    border-bottom: none;
+}
+
+.details-grid span {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #8b7040;
+    margin-bottom: 10px;
+}
+
+.details-grid strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* BACK BUTTON */
+
+.back-area {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #8b7040;
+    color: #8b7040;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #8b7040;
+    color: #f5f1e8;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px;
+    }
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #c9a86a;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #11100e;
+    padding: 20px;
+    border: 1px solid rgba(201,168,106,0.2);
+    flex-direction: column;
+    gap: 18px;
+}
+
+nav.active {
+    display: flex;
+}
+
+nav a {
+    margin-left: 0;
+    font-size: 9px;
+}
+
+    nav a {
+        margin-left: 12px;
+        font-size: 8px;
+    }
+
+    .noir-page {
+        padding: 130px 25px 70px;
+    }
+
+    .noir-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .watch-area img {
+        height: 350px;
+    }
+
+    .noir-info {
+        text-align: center;
+    }
+
+    .collection-label {
+        margin-bottom: 15px;
+    }
+
+    .noir-info h1 {
+        font-size: 52px;
+    }
+
+    .divider {
+        justify-content: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .details {
+        padding: 80px 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid div {
+        border-right: none;
+        border-bottom: 1px solid #cfc6b8;
+    }
+
+    .details-grid div:nth-child(3n) {
+        border-right: none;
+    }
+
+    .details-grid div:nth-child(n+4) {
+        border-bottom: 1px solid #cfc6b8;
+    }
+
+    .details-grid div:last-child {
+        border-bottom: none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SALIZÉ</div>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu">
+        ☰
+    </button>
+
+    <nav>
+        <a href="index.html#home">HOME</a>
+        <a href="index.html#collection">COLLECTION</a>
+        <a href="index.html#story">OUR STORY</a>
+        <a href="index.html#contact">CONTACT</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="noir-page">
+
+    <div class="noir-container">
+
+        <div class="watch-area">
+            <img src="salize-noir.png" alt="SALIZÉ THE NOIR">
+        </div>
+
+
+        <div class="noir-info">
+
+            <div class="collection-label">
+                SALIZÉ COLLECTION
+            </div>
+
+            <h1>THE NOIR</h1>
+
+            <div class="coming-soon-badge">
+                COMING SOON
+            </div>
+
+            <div class="price-label">
+                PRICE — TO BE ANNOUNCED
+            </div>
+
+            <a href="index.html#contact" class="notify-button">
+                NOTIFY ME
+            </a>
+
+            <div class="divider">
+                <span></span>
+                <strong>×</strong>
+                <span></span>
+            </div>
+
+            <p class="description">
+                Bold lines. Quiet confidence. Distinctly SALIZÉ.
+                <br><br>
+                THE NOIR brings together a dark,
+                refined character with a modern expression
+                of luxury. Designed to make an impression
+                without demanding attention.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DETAILS -->
+
+<section class="details">
+
+    <div class="details-container">
+
+        <div class="details-label">
+            THE NOIR
+        </div>
+
+        <h2>CRAFTED IN DARKNESS</h2>
+
+
+        <div class="details-grid">
+
+            <div>
+                <span>CASE</span>
+                <strong>40 MM</strong>
+            </div>
+
+            <div>
+                <span>MATERIAL</span>
+                <strong>BLACK STAINLESS STEEL</strong>
+            </div>
+
+            <div>
+                <span>MOVEMENT</span>
+                <strong>AUTOMATIC</strong>
+            </div>
+
+            <div>
+                <span>STRAP</span>
+                <strong>BLACK STEEL BRACELET</strong>
+            </div>
+
+            <div>
+                <span>WATER RESISTANCE</span>
+                <strong>5 ATM</strong>
+            </div>
+
+            <div>
+                <span>COLLECTION</span>
+                <strong>THE NOIR</strong>
+            </div>
+
+        </div>
+
+
+        <div class="back-area">
+
+            <a href="index.html#collection" class="back-button">
+                BACK TO COLLECTION
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

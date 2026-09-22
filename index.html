@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALIZÉ — Beyond Time</title>
+<meta name="description" content="SALIZÉ — Beyond Time. Discover timeless luxury watches crafted with modern elegance, refined design, and enduring identity.">
+<link rel="icon" type="image/png" href="salize-favicon.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:#080808;color:#f4f0e8;font-family:Georgia,"Times New Roman",serif}
+header{position:absolute;top:0;left:0;width:100%;padding:32px 55px;display:flex;align-items:center;justify-content:space-between;z-index:10}.logo{font-size:28px;letter-spacing:7px;font-weight:normal;opacity:0;animation:logoFade 2s ease forwards;animation-delay:.4s}@keyframes logoFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}nav{display:flex;gap:32px}
+
+nav a{
+    position:relative;
+    color:#d9d3c8;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+    transition:color .3s ease;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:1px;
+    background:#c9a86a;
+    transition:width .35s ease;
+}
+
+nav a:hover{
+    color:#c9a86a;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 25px;background:radial-gradient(circle at 50% 45%,#29251d 0%,#15130f 28%,#0b0b0b 60%,#050505 100%);position:relative;overflow:hidden}.hero::before{content:"";position:absolute;width:700px;height:700px;border:1px solid rgba(201,168,106,.12);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}.hero-content{position:relative;z-index:2;max-width:900px}.eyebrow{font-family:Arial,sans-serif;font-size:10px;letter-spacing:6px;color:#c9a86a;margin-bottom:32px}.hero h1{font-size:clamp(65px,12vw,145px);font-weight:normal;letter-spacing:18px;margin-left:18px;line-height:1;opacity:0;animation:titleFade 2.2s ease forwards;animation-delay:.8s}@keyframes titleFade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}.tagline{margin-top:25px;font-size:18px;letter-spacing:9px;color:#c9a86a;opacity:0;animation:taglineFade 2s ease forwards;animation-delay:1.5s}@keyframes taglineFade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}.hero-description{max-width:520px;margin:35px auto 0;font-family:Arial,sans-serif;font-size:13px;line-height:2;color:#aaa59c}.coming-soon{margin-top:45px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:5px;color:#d8d0c2;opacity:0;animation:comingSoonFade 2s ease forwards;animation-delay:2.2s}@keyframes comingSoonFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.line{width:0;height:1px;background:#c9a86a;margin:18px auto;animation:lineGrow 1.2s ease forwards;animation-delay:2.8s}@keyframes lineGrow{from{width:0}to{width:70px}}.final-message{font-family:Arial,sans-serif;font-size:10px;letter-spacing:5px;color:#d8d0c2;opacity:0;animation:finalMessageFade 2s ease forwards;animation-delay:3.3s}@keyframes finalMessageFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.hero-watch{display:block;width:min(420px,70vw);max-height:420px;object-fit:contain;margin:55px auto 0;opacity:0;transform:translateY(25px) scale(.96);animation:watchReveal 2s ease forwards;animation-delay:3.8s}@keyframes watchReveal{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.collection{padding:120px 30px;background:#f0ede6;color:#111;text-align:center}.section-label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:4px;color:#8b7040;margin-bottom:20px}.collection h2{
+    font-size:clamp(42px,5vw,64px);
+    font-weight:normal;
+    letter-spacing:3px;
+    margin-bottom:25px;
+}.collection-text{max-width:600px;margin:auto;font-family:Arial,sans-serif;font-size:14px;line-height:1.9;color:#555}.placeholder{margin:60px auto 0;max-width:900px;height:280px;border:1px solid #d1cbc0;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;font-size:10px;letter-spacing:4px;color:#8b7040}.story{padding:120px 30px;background:#0b0b0b;text-align:center}.story h2{font-size:48px;font-weight:normal;margin-bottom:25px}.story p{max-width:620px;margin:auto;font-family:Arial,sans-serif;font-size:14px;line-height:2;color:#aaa59c}.newsletter{padding:100px 30px;background:#15130f;text-align:center}.newsletter h2{font-size:42px;font-weight:normal;margin-bottom:20px}.newsletter p{font-family:Arial,sans-serif;color:#aaa59c;font-size:13px;margin-bottom:30px}.email-box{display:flex;max-width:500px;margin:auto}.email-box input{flex:1;padding:17px;background:transparent;border:1px solid #625b50;color:white;outline:none;font-family:Arial,sans-serif}.email-box button{padding:17px 25px;border:1px solid #c9a86a;background:#c9a86a;color:#080808;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;cursor:pointer}footer{padding:45px 30px;background:#050505;text-align:center;font-family:Arial,sans-serif;font-size:9px;letter-spacing:3px;color:#666}
+@media(max-width:700px){header{padding:25px 20px}nav{display:none}.logo{font-size:22px}.hero{padding:100px 20px}.hero h1{font-size:58px;letter-spacing:9px;margin-left:9px}.tagline{font-size:13px;letter-spacing:5px}.hero-description{font-size:12px}.hero::before{width:400px;height:400px}.hero-watch{width:min(330px,80vw);max-height:330px;margin-top:40px}.collection{padding:85px 25px}.collection h2,.story h2{font-size:38px}.placeholder{height:220px}.newsletter h2{font-size:34px}.email-box{flex-direction:column;gap:10px}}
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 60px auto 0;
+}
+
+.watch-card {
+    background: linear-gradient(145deg, #fbf8f2, #f1ece3);
+    border: 1px solid #d8d1c7;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.watch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    border-color: #c9a86a;
+}
+
+.watch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    border-color: #c9a86a;
+}
+
+.watch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.16);
+}
+
+.watch-card img {
+    width: 100%;
+    height: 275px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 18px;
+    transition: transform 0.5s ease;
+}
+
+.watch-card:hover img {
+    transform: scale(1.04);
+}
+
+.watch-card h3 {
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin: 18px 0 8px;
+    color: #c9a86a;
+    text-decoration: none;
+    transition: letter-spacing 0.4s ease, color 0.4s ease;
+}
+
+.watch-card:hover h3 {
+    letter-spacing: 6px;
+    color: #d8bd82;
+}
+
+.watch-card {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.watch-card p {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+    color: #8b7040;
+    margin: 0 0 20px;
+    opacity: 0.9;
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.watch-card:hover p {
+    color: #a88a52;
+    opacity: 1;
+}
+
+.watch-card span {
+    display: inline-block;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #8b7040;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.watch-card:hover span {
+    opacity: 1;
+    letter-spacing: 3.5px;
+}
+
+@media (max-width: 800px) {
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.story {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+   background-image:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,0.84) 0%,
+        rgba(0,0,0,0.60) 38%,
+        rgba(0,0,0,0.18) 72%,
+        rgba(0,0,0,0.34) 100%
+    ),
+    url("salize-story.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.story-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    max-width: 700px;
+    margin-left: 7%;
+    padding: 100px 30px;
+    text-align: center;
+    animation: storyReveal 1.6s ease both;
+}
+
+@keyframes storyReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-content {
+    opacity: 0;
+}
+
+.story-content.story-visible {
+    animation: storyReveal 1.6s ease both;
+}
+
+.story-label {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a86a;
+    margin-bottom: 25px;
+}
+
+.story h2 {
+    margin: 0 0 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #f5f1e8;
+    text-shadow: 0 4px 25px rgba(0,0,0,0.7);
+}
+
+.story-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 260px;
+    margin: 0 auto 32px;
+    color: #c9a86a;
+    font-size: 18px;
+}
+
+.story-divider span {
+    width: 100px;
+    height: 1px;
+    background: #c9a86a;
+}
+
+.story p {
+    max-width: 580px;
+    margin: 0 auto 28px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #eee8dc;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 800px) {
+    .story {
+        min-height: 800px;
+        background-position: 62% center;
+    }
+
+    .story-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 100px 25px 80px;
+    }
+}
+
+    html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 0;
+}
+
+.newsletter {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #11100e;
+    color: #f5f1e8;
+    padding: 100px 25px;
+}
+
+.newsletter-content {
+    width: 100%;
+    max-width: 750px;
+    opacity: 0;
+}
+
+.newsletter-content.newsletter-visible {
+    animation: newsletterReveal 1.5s ease both;
+}
+
+@keyframes newsletterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.newsletter-label {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a86a;
+    margin-bottom: 25px;
+}
+
+.newsletter h2 {
+    margin: 0 0 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #f5f1e8;
+}
+
+.newsletter-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 260px;
+    margin: 0 auto 32px;
+    color: #c9a86a;
+    font-size: 18px;
+}
+
+.newsletter-divider span {
+    width: 100px;
+    height: 1px;
+    background: #c9a86a;
+}
+
+.newsletter p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #eee8dc;
+    margin-bottom: 8px;
+}
+
+.newsletter-subtext {
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #aaa49a !important;
+    margin-bottom: 35px !important;
+}
+
+.email-box {
+    max-width: 560px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #c9a86a;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        background: #11100e;
+        padding: 25px;
+        border: 1px solid #2a2722;
+    }
+
+    header nav.menu-open {
+        display: flex;
+    }
+
+    header nav a {
+        margin-left: 0;
+        font-size: 10px;
+    }
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 15px 34px;
+    border: 1px solid #c9a86a;
+    color: #c9a86a;
+    background: transparent;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+}
+
+.hero-button:hover {
+    background: #c9a86a;
+    color: #11100e;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">SALIZÉ</div>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu">
+        ☰
+    </button>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#collection">COLLECTION</a>
+        <a href="#story">OUR STORY</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+<section class="hero" id="home"><div class="hero-content"><div class="eyebrow">EST. 2026</div><h1>SALIZÉ</h1><div class="tagline">BEYOND TIME</div><p class="hero-description">A new expression of modern luxury. Designed with precision, created with purpose, and inspired by the timeless art of watchmaking.</p><div class="coming-soon">COMING SOON</div>
+
+<a href="#collection" class="hero-button">
+    EXPLORE COLLECTION
+</a>
+
+<div class="line"></div><div class="final-message">SOMETHING TIMELESS IS ON ITS WAY</div><img src="salize-watch.png" alt="SALIZÉ luxury watch" class="hero-watch"></div></section>
+<section class="collection" id="collection"><div class="section-label">THE COLLECTION</div><h2>Timeless by Design.</h2><p class="collection-text">The first SALIZÉ collection is currently being crafted. Every detail is being considered with one purpose — to create watches that exist beyond trends and beyond time.</p><div class="collection-grid">
+
+    <a href="icon.html" class="watch-card">
+        <img src="salize-watch.png" alt="SALIZÉ The Icon">
+      <h3>THE ICON</h3>
+        <p>Our signature expression of modern luxury.</p>
+        <span>COMING SOON</span>
+    </a>
+
+    <a href="noir.html" class="watch-card">
+        <img src="salize-watch.png" alt="SALIZÉ The Noir">
+        <h3>THE NOIR</h3>
+        <p>Bold lines. Quiet confidence. Distinctly SALIZÉ.</p>
+        <span>COMING SOON</span>
+    </a>
+
+    <a href="classic.html" class="watch-card">
+        <img src="salize-watch.png" alt="SALIZÉ The Classic">
+        <h3>THE CLASSIC</h3>
+        <p>Timeless elegance, redefined.</p>
+        <span>COMING SOON</span>
+    </a>
+
+</div>
+</section>
+
+<section class="story" id="story"><div class="story-content"><div class="story-label">OUR STORY</div><h2>BEYOND TIME</h2><div class="story-divider"><span></span>×<span></span></div><p>SALIZÉ was born from a passion for timeless craftsmanship and the belief that a watch is more than a timekeeper — it is a legacy.</p><p>Every detail is crafted with purpose.<br>Every moment, beyond time.</p></div></section>
+<section class="newsletter" id="contact">
+    <div class="newsletter-content">
+        <div class="newsletter-label">THE JOURNEY BEGINS</div>
+
+        <h2>BE THE FIRST TO KNOW</h2>
+
+        <div class="newsletter-divider">
+            <span></span>
+            ×
+            <span></span>
+        </div>
+
+        <p>Be among the first to discover the world of SALIZÉ.</p>
+        <p class="newsletter-subtext">Join our private list for exclusive launch updates, collection announcements and first access.</p>
+
+<form class="email-box" id="newsletter-form"
+      method="POST"
+      action="https://6ca1293b.sibforms.com/serve/MUIFAFVowudVwlQc1pJC0xeJfDLnLLylifcso2Z5eNhDRHJ_YKUgU9Q6pin9UPLY3S2RiQUgJVsWM4XtTDKRBxYkGWwyNzAQfK-76VAvQpc3SXJlBKLQkowkTcBhP9DQpDlgEvWA2-6bnEVEH62A71576tNi8_l70m9pe2taDyx0zSugwUFB7dX512VVcr2L_0gABttBVnNzX6eV_A=="
+      data-type="subscription">
+
+    <input
+        type="email"
+        id="newsletter-email"
+        name="EMAIL"
+        placeholder="YOUR EMAIL ADDRESS"
+        autocomplete="email"
+        required
+    >
+
+    <button type="submit">JOIN</button>
+
+    <input type="text" name="email_address_check" value="" class="input--hidden">
+    <input type="hidden" name="locale" value="en">
+
+</form>
+
+       
+
+<div id="newsletter-message"></div>
+<p class="contact-email">
+    CONTACT — <a href="mailto:salizeofficial@gmail.com">salizeofficial@gmail.com</a>
+</p>
+<style>
+
+.input--hidden {
+    display: none !important;
+}
+
+.email-box {
+    display: block;
+    max-width: 560px;
+    margin: 35px auto 0;
+    text-align: center;
+    border-bottom: none !important;
+}
+
+.email-box input[type="email"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #c9a86a;
+    outline: none;
+    padding: 16px 10px;
+    color: #f5f1e8;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.email-box input[type="email"]::placeholder {
+    color: #aaa49a;
+}
+
+.email-box button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid #c9a86a;
+    color: #c9a86a;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.email-box button:hover {
+    background: #c9a86a;
+    color: #11100e;
+}
+
+#newsletter-message {
+    margin-top: 22px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c9a86a;
+    text-align: center;
+    min-height: 18px;
+}
+.site-footer {
+    background: #0b0b0a;
+    color: #f5f1e8;
+    text-align: center;
+    padding: 80px 25px 30px;
+    border-top: 1px solid #2a2722;
+}
+
+.footer-logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    color: #c9a86a;
+    margin-bottom: 40px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.footer-socials a {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #aaa49a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #c9a86a;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2a2722;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #77736d;
+}
+
+.contact-email {
+    margin-top: 32px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: #8f887e;
+    text-align: center;
+}
+
+.contact-email a {
+    color: #c9a86a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+    color: #f5f1e8;
+}
+
+@media (max-width: 600px) {
+    .footer-socials {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+.footer-bottom a {
+    color: #aaa49a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #c9a86a;
+}
+</style>
+
+
+    </div>
+</section><footer>© 2026 SALIZÉ — BEYOND TIME</footer>
+<script>
+const story = document.querySelector('.story');
+
+const storyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            story.classList.add('story-visible');
+        }
+    });
+}, {
+    threshold: 0.25
+});
+
+storyObserver.observe(story);
+</script>
+
+<script>
+const newsletter = document.querySelector('.newsletter-content');
+
+const newsletterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            newsletter.classList.add('newsletter-visible');
+        }
+    });
+}, {
+    threshold: 0.25
+});
+
+newsletterObserver.observe(newsletter);
+</script>
+
+
+<script>
+const newsletterForm = document.getElementById('newsletter-form');
+const newsletterEmail = document.getElementById('newsletter-email');
+const newsletterMessage = document.getElementById('newsletter-message');
+
+newsletterForm.addEventListener('submit', function(event) {
+    if (newsletterEmail.value.trim() === '') {
+        event.preventDefault();
+        newsletterMessage.textContent = 'PLEASE ENTER YOUR EMAIL ADDRESS.';
+        return;
+    }
+
+    if (!newsletterEmail.checkValidity()) {
+        event.preventDefault();
+        newsletterMessage.textContent = 'PLEASE ENTER A VALID EMAIL ADDRESS.';
+        return;
+    }
+
+    newsletterMessage.textContent =
+        'THANK YOU. YOU ARE NOW PART OF THE SALIZÉ JOURNEY.';
+});
+</script>
+
+<footer class="site-footer">
+    <div class="footer-logo">SALIZÉ</div>
+
+    <p class="footer-tagline">BEYOND TIME</p>
+
+    <div class="footer-socials">
+        <a href="https://www.instagram.com/salize.times" target="_blank">INSTAGRAM</a>
+<a href="https://www.facebook.com/share/1CzHZsubjH/?mibextid=wwXIfr" target="_blank">FACEBOOK</a>
+<a href="https://www.tiktok.com/@salize_times" target="_blank">TIKTOK</a>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 SALIZÉ. ALL RIGHTS RESERVED.</span>
+        <span>
+    <a href="privacy.html">PRIVACY POLICY</a>
+    &nbsp; | &nbsp;
+    <a href="terms.html">TERMS</a>
+</span>
+
+    </div>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('header nav');
+
+menuToggle.addEventListener('click', function() {
+    mobileNav.classList.toggle('menu-open');
+});
+
+const mobileLinks = mobileNav.querySelectorAll('a');
+
+mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        mobileNav.classList.remove('menu-open');
+    });
+});
+</script>
+
+</body>
+</html>
